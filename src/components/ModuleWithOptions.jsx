@@ -1,6 +1,7 @@
 import React from 'react'
 import Module from './Module'
 import { Icon } from './Icon'
+import { Image } from './Image'
 
 const stylesOptions={
     module: {
@@ -14,13 +15,11 @@ const stylesOptions={
         background: 'white',
         boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
     },
-    box:{
-        
+    box:{  
     }
 }
 
 function ModuleWithOptions() {
-    
   return (
     <div style={stylesOptions.module}>
       <Icon />
