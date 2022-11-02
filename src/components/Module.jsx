@@ -9,6 +9,7 @@ const styles={
     marginBottom: 10,
     width: '300px',
     height:'200px',
+    /* creating the box*/
     border:'2px solid black',
     borderRadius:'15px'
     }
@@ -17,8 +18,8 @@ const styles={
 function Module() {
   return (
     <div style={styles.module}>
-        <h2> Dr Lynch</h2>
-        <h3> My specialist</h3>
+      
+        <h3>chat</h3>
     </div>
   )
 }
