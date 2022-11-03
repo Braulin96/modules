@@ -5,9 +5,9 @@ function App() {
   return (
   <div >
     <Module>Texto</Module>
-    <ModuleWithOptions>Texto</ModuleWithOptions>
-    </div>
+    <ModuleWithOptions>Texto</ModuleWithOptions> 
+  </div> 
+  
   );
 }
-
 export default App;

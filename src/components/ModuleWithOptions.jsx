@@ -1,33 +1,24 @@
 import React from 'react'
-import Module from './Module'
-import { Icon } from './Icon'
-import { Image } from './Image'
+import optionIcon from '../images/optionIcon.svg'
+import Module from './Module';
 
-const stylesOptions={
-    module: {
-        padding: 20,
-        marginBottom: 10,
-        // fica de acordo com o tamanho do conteudo
-        width: 'fit-content',
-        height:'fit-content',
-        /* creating the box*/
-        borderRadius:'15px',
-        background: 'white',
-        boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
-    },
-    box:{  
-    }
-}
+import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
+import '@szhsin/react-menu/dist/index.css';
+import '@szhsin/react-menu/dist/transitions/slide.css';
+
 
 const ModuleWithOptions =(props) => {
   return (
-    <module>
-    <div style={stylesOptions.module}>
-      <Icon />
-      {props.children}
-    </div>
-    </module>
-    )
+    <Module>
+      <div>
+        <Menu menuButton={<MenuButton><img src={optionIcon} alt="image" /></  MenuButton>} transition>
+          <MenuItem>New File</MenuItem>
+          <MenuItem>Save</MenuItem>
+          <MenuItem>Close Window</MenuItem>
+        </Menu>
+        {props.children}
+      </div>
+    </Module>
+  )
 }
-
 export default ModuleWithOptions
