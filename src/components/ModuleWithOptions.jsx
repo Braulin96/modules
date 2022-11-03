@@ -19,11 +19,14 @@ const stylesOptions={
     }
 }
 
-function ModuleWithOptions() {
+const ModuleWithOptions =(props) => {
   return (
+    <module>
     <div style={stylesOptions.module}>
       <Icon />
+      {props.children}
     </div>
+    </module>
     )
 }
 

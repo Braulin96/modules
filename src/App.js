@@ -3,11 +3,10 @@ import ModuleWithOptions from "./components/ModuleWithOptions";
 
 function App() {
   return (
-    <Module>
-      <div className="App">
-        <ModuleWithOptions />
-      </div>
-    </Module>
+  <div >
+    <Module>Texto</Module>
+    <ModuleWithOptions>Texto</ModuleWithOptions>
+    </div>
   );
 }
 

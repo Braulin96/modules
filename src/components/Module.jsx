@@ -15,9 +15,8 @@ const styles={
 }
 const Module =(props) =>{
   return (
-    <div style={styles.module}>
-      <h3>chat</h3>
-      <main>{props.children}</main>
+    <div >
+      {props.children}
     </div>
   )
 }
