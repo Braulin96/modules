@@ -3,13 +3,14 @@ import Module from './Module';
 import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
-import optionIcon from '../images/optionIcon.svg'
-import secondIcon from '../images/secondIcon.svg'
+import optionIcon from '../images/optionIcon.svg';
+import secondIcon from '../images/secondIcon.svg';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Example from './Example';
-import { Alert } from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'; //important
+import TextBox from './TextBox';
+import MoreInfo from './MoreInfo';
 
 const stylesIcon={
   moduleIcon: {
@@ -18,7 +19,6 @@ const stylesIcon={
     padding:" 15px 0px 10px 65px ", 
     width: '5px',
     height:'5px',
-  
   },
   moduleDotIcon: {
     margin:"5px 0px 0px 0px",
@@ -29,31 +29,31 @@ const stylesIcon={
     lineHeight:"3px",
     fontSize:"15px",
   },
+  moreInfo:{
+    color:"blue",
+    backgroundColor:"white",
+    border:"none",
+    width:"50vh",
+    padding:"0px",
+  },
+  
 }
-
 
 const ModuleWithOptions =(props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   console.log(props)
 
   return ( 
     <>
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>Modal heading</Modal.Title>
-      </Modal.Header>
+    <Modal size='sm' show={show} onHide={handleClose}>
       <Modal.Body>
-        Woohoo, you're reading this text in a modal!
+        <MoreInfo/>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={handleClose}>
-          Save Changes
+        <Button style={stylesIcon.moreInfo} variant="secondary" onClick={handleClose}>
+         Ok
         </Button>
       </Modal.Footer>
     </Modal> 
@@ -67,7 +67,6 @@ const ModuleWithOptions =(props) => {
           <MenuItem><a onClick={handleShow}><li >Learn more</li></a></MenuItem>
           <MenuItem ><li>Action</li></MenuItem>
         </Menu>
-        
       </div>
       <div style={stylesIcon.containerText}>
         {props.children}

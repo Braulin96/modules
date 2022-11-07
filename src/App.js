@@ -1,8 +1,5 @@
-import Module from "./components/Module";
 import ModuleWithOptions from "./components/ModuleWithOptions";
-import Example from "./components/Example"
-
-
+import MoreInfo from "./components/MoreInfo";
 function App() {
   return (
   <div >
@@ -10,7 +7,6 @@ function App() {
       <h3>98%</h3>
       <p>Health Score</p>
     </ModuleWithOptions>
-
   </div> 
   );
 }
