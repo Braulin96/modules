@@ -35,8 +35,7 @@ const stylesIcon={
     border:"none",
     width:"50vh",
     padding:"0px",
-  },
-  
+  },  
 }
 
 const ModuleWithOptions =(props) => {
@@ -47,32 +46,34 @@ const ModuleWithOptions =(props) => {
 
   return ( 
     <>
-    <Modal size='sm' show={show} onHide={handleClose}>
-      <Modal.Body>
-        <MoreInfo/>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button style={stylesIcon.moreInfo} variant="secondary" onClick={handleClose}>
-         Ok
-        </Button>
-      </Modal.Footer>
-    </Modal> 
+      <Modal size='sm' show={show} onHide={handleClose}>
+        <Modal.Body>
+          <MoreInfo/>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button style={stylesIcon.moreInfo} variant="secondary" onClick={handleClose}>
+          Ok
+          </Button>
+        </Modal.Footer>
+      </Modal> 
 
-    <Module>
-      <div style={stylesIcon.moduleDotIcon}>
-        <img src={secondIcon} alt="image" />
-      </div>
-      <div>
-        <Menu menuButton ={<MenuButton style={stylesIcon.moduleIcon}><img src={optionIcon} alt="image"/></MenuButton>} transition>
-          <MenuItem><a onClick={handleShow}><li >Learn more</li></a></MenuItem>
-          <MenuItem ><li>Action</li></MenuItem>
-        </Menu>
-      </div>
-      <div style={stylesIcon.containerText}>
-        {props.children}
-      </div>
-    </Module>
+      <Module>
+        <div style={stylesIcon.moduleDotIcon}>
+          <img src={secondIcon} alt="image" />
+        </div>
+        <div>
+          <Menu menuButton ={<MenuButton style={stylesIcon.moduleIcon}><img src={optionIcon} alt="image"/></MenuButton>} transition>
+            <MenuItem><a onClick={handleShow}><li >Learn more</li></a></MenuItem>
+            <MenuItem ><li>Action</li></MenuItem>
+          </Menu>
+        </div>
+        <div style={stylesIcon.containerText}>
+          {props.children}
+        </div>
+      </Module>
+      
     </>
   )
+  
 }
 export default ModuleWithOptions
