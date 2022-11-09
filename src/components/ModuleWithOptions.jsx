@@ -24,16 +24,13 @@ const stylesIcon={
     margin:"5px 0px 0px 0px",
   },
   containerText:{
-    color:"black",
     margin:"0px 0px 0px 15px",
-    lineHeight:"3px",
-    fontSize:"15px",
   },
   moreInfo:{
     color:"blue",
     backgroundColor:"white",
     border:"none",
-    width:"50vh",
+    width:"100%",
     padding:"0px",
   },  
 }
@@ -42,11 +39,10 @@ const ModuleWithOptions =(props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  console.log(props)
 
   return ( 
     <>
-      <Modal size='sm' show={show} onHide={handleClose}>
+      <Modal size='sm' show={show} onHide={handleClose} centered>
         <Modal.Body>
           <MoreInfo/>
         </Modal.Body>
