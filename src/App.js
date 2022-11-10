@@ -1,5 +1,8 @@
 import ModuleWithOptions from "./components/ModuleWithOptions";
 import Carousel from 'react-elastic-carousel';
+import Module from "./components/Module";
+import ModuleMore from "./components/ModuleMore";
+
 
 function App() {
   const breakPoints=[
@@ -10,6 +13,20 @@ function App() {
 ]
   return (
   <div >
+   <ModuleMore height={80}>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+    <p>container</p>
+   </ModuleMore>
+   
     <Carousel breakPoints={breakPoints} showArrows={false}>
       <div className="my-4">
         <ModuleWithOptions>
@@ -17,23 +34,32 @@ function App() {
           <p className="m-0">Checks</p>
         </ModuleWithOptions>
       </div>
-      <ModuleWithOptions>
-        <h3 className="m-0">98%</h3>
-        <p className="m-0">Health Score</p>
-      </ModuleWithOptions>
-      <ModuleWithOptions>
-        <h3 className="m-0">Dr Lyunch</h3>
-        <p className="m-0">My specialist</p>
-      </ModuleWithOptions>
-      <ModuleWithOptions>
-        <h3 className="m-0">Fitness</h3>
-        <p className="m-0">My hours</p>
-      </ModuleWithOptions>
-      <ModuleWithOptions>
-        <h3 className="m-0">Medical History</h3>
-      </ModuleWithOptions>
+      <div className="my-4">
+        <ModuleWithOptions>
+          <h3 className="m-0">98%</h3>
+          <p className="m-0">Health Score</p>
+        </ModuleWithOptions>
+      </div>
+      <div className="my-4">
+        <ModuleWithOptions>
+          <h3 className="m-0">Dr Lynch</h3>
+          <p className="m-0">My specialist</p>
+        </ModuleWithOptions>
+      </div>
+      <div className="my-4">
+        <ModuleWithOptions>
+          <h3 className="m-0">Fitness</h3>
+          <p className="m-0">My hours</p>
+        </ModuleWithOptions>
+      </div>
+      <div className="my-4">
+        <ModuleWithOptions>
+          <h3 className="m-0">Medical history</h3>
+        </ModuleWithOptions>
+      </div>
     </Carousel>
   </div> 
+  
   );
 }
 export default App;

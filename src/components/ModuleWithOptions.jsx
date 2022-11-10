@@ -9,22 +9,29 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css'; //important
-import TextBox from './TextBox';
 import MoreInfo from './MoreInfo';
 
-const stylesIcon={
+const styles={
+  moduleWrapper: {
+    width: 150,
+    height: 150,
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
   moduleIcon: {
     backgroundColor:"white",
     border:"none",
-    padding:" 15px 0px 10px 65px ", 
-    width: '5px',
-    height:'5px',
+    padding: "5px 2px 5px 12px", 
   },
   moduleDotIcon: {
-    margin:"5px 0px 0px 0px",
+    //margin:"5px 0px 0px 0px",
   },
   containerText:{
-    margin:"0px 0px 0px 15px",
+   // margin:"0px 0px 0px 15px",
+   position: "absolute",
+   bottom: 0,
   },
   moreInfo:{
     color:"blue",
@@ -32,7 +39,11 @@ const stylesIcon={
     border:"none",
     width:"100%",
     padding:"0px",
-  },  
+  }, 
+  allModule:{
+    
+    padding:"10px"
+  }
 }
 
 const ModuleWithOptions =(props) => {
@@ -42,34 +53,37 @@ const ModuleWithOptions =(props) => {
 
   return ( 
     <>
-      <Modal size='sm' show={show} onHide={handleClose} centered>
+      <Modal size='md' show={show} onHide={handleClose} centered>
         <Modal.Body>
           <MoreInfo/>
         </Modal.Body>
         <Modal.Footer>
-          <Button style={stylesIcon.moreInfo} variant="secondary" onClick={handleClose}>
+          <Button style={styles.moreInfo} variant="secondary" onClick={handleClose}>
           Ok
           </Button>
         </Modal.Footer>
       </Modal> 
-
       <Module>
-        <div style={stylesIcon.moduleDotIcon}>
-          <img src={secondIcon} alt="image" />
-        </div>
-        <div>
-          <Menu menuButton ={<MenuButton style={stylesIcon.moduleIcon}><img src={optionIcon} alt="image"/></MenuButton>} transition>
-            <MenuItem><a onClick={handleShow}><li >Learn more</li></a></MenuItem>
-            <MenuItem ><li>Action</li></MenuItem>
-          </Menu>
-        </div>
-        <div style={stylesIcon.containerText}>
-          {props.children}
+        <div style={styles.allModule}>
+          <div style={styles.moduleWrapper}>
+            <div className='d-flex flex-wrap justify-content-between'>
+              <div style={styles.moduleDotIcon}>
+                <img src={secondIcon} alt="image" />
+              </div>
+              <div>
+                <Menu menuButton ={<MenuButton style={styles.moduleIcon}><img src={optionIcon} alt="image"/></MenuButton>} transition>
+                  <MenuItem><a onClick={handleShow}><li >Learn more</li></a></MenuItem>
+                  <MenuItem ><li>Action</li></MenuItem>
+                </Menu>
+              </div>
+            </div>
+            <div style={styles.containerText}>
+              {props.children}
+            </div>
+          </div>
         </div>
       </Module>
-      
     </>
-  )
-  
+  ) 
 }
 export default ModuleWithOptions
