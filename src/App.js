@@ -1,4 +1,4 @@
-import ModuleWithOptions from "./components/ModuleWithOptions";
+import ModuleOptionsAndIcon from "./components/ModuleOptionsAndIcon";
 import Carousel from 'react-elastic-carousel';
 import Module from "./components/Module";
 import ModuleMore from "./components/ModuleMore";
@@ -20,42 +20,37 @@ function App() {
     <p>container</p>
     <p>container</p>
     <p>container</p>
-    <p>container</p>
-    <p>container</p>
-    <p>container</p>
-    <p>container</p>
-    <p>container</p>
    </ModuleMore>
    
     <Carousel breakPoints={breakPoints} showArrows={false}>
       <div className="my-4">
-        <ModuleWithOptions>
+        <ModuleOptionsAndIcon>
           <h3 className="m-0">2/7</h3>
           <p className="m-0">Checks</p>
-        </ModuleWithOptions>
+        </ModuleOptionsAndIcon>
       </div>
       <div className="my-4">
-        <ModuleWithOptions>
+        <ModuleOptionsAndIcon>
           <h3 className="m-0">98%</h3>
           <p className="m-0">Health Score</p>
-        </ModuleWithOptions>
+        </ModuleOptionsAndIcon>
       </div>
       <div className="my-4">
-        <ModuleWithOptions>
+        <ModuleOptionsAndIcon>
           <h3 className="m-0">Dr Lynch</h3>
           <p className="m-0">My specialist</p>
-        </ModuleWithOptions>
+        </ModuleOptionsAndIcon>
       </div>
       <div className="my-4">
-        <ModuleWithOptions>
+        <ModuleOptionsAndIcon>
           <h3 className="m-0">Fitness</h3>
           <p className="m-0">My hours</p>
-        </ModuleWithOptions>
+        </ModuleOptionsAndIcon>
       </div>
       <div className="my-4">
-        <ModuleWithOptions>
+        <ModuleOptionsAndIcon>
           <h3 className="m-0">Medical history</h3>
-        </ModuleWithOptions>
+        </ModuleOptionsAndIcon>
       </div>
     </Carousel>
   </div> 

@@ -46,7 +46,7 @@ const styles={
   }
 }
 
-const ModuleWithOptions =(props) => {
+const ModuleOptionsAndIcon =(props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -86,4 +86,4 @@ const ModuleWithOptions =(props) => {
     </>
   ) 
 }
-export default ModuleWithOptions
+export default ModuleOptionsAndIcon
