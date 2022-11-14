@@ -3,7 +3,9 @@ import Carousel from 'react-elastic-carousel';
 import Module from "./components/Module";
 import ModuleMore from "./components/ModuleMore";
 import ModuleExpand from "./components/ModuleExpand";
-import Exemplo from "./components/Exemplo";
+import ModuleCalendar from "./components/ModuleCalendar";
+import CalendarWeek from "./components/CalendarWeek";
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
 ]
   return (
   <div >
+    <CalendarWeek/>
     <ModuleMore height={80}>
       <p>container</p>
       <p>container</p>
