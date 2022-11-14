@@ -41,7 +41,6 @@ const styles={
     padding:"0px",
   }, 
   allModule:{
-    
     padding:"10px"
   }
 }

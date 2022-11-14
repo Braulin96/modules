@@ -7,12 +7,14 @@ const stylesOptions={
     borderRadius:'15px',
     background: 'none',
     boxShadow: 'rgba(249, 157, 165, 0.2) 0px 8px 24px',
-  }
+    width: 'fit-content',
+    height: 'fit-content',
+}
 }
 
 const Module =(props) =>{
   return (
-    <div style={stylesOptions.module} >
+    <div className={props.className} style={stylesOptions.module} >
       {props.children}
     </div>
   )

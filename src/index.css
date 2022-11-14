@@ -31,3 +31,8 @@ code {
 p.m-0{
   padding-bottom: 10px !important;
 }
+.szh-menu-button{
+  background-color:white;
+  border:none;
+  padding: 5px 2px 5px 12px; 
+}

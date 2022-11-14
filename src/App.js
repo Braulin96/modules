@@ -2,6 +2,8 @@ import ModuleOptionsAndIcon from "./components/ModuleOptionsAndIcon";
 import Carousel from 'react-elastic-carousel';
 import Module from "./components/Module";
 import ModuleMore from "./components/ModuleMore";
+import ModuleExpand from "./components/ModuleExpand";
+import Exemplo from "./components/Exemplo";
 
 
 function App() {
@@ -13,14 +15,16 @@ function App() {
 ]
   return (
   <div >
-   <ModuleMore height={80}>
-    <p>container</p>
-    <p>container</p>
-    <p>container</p>
-    <p>container</p>
-    <p>container</p>
-    <p>container</p>
-   </ModuleMore>
+    <ModuleMore height={80}>
+      <p>container</p>
+      <p>container</p>
+      <p>container</p>
+      <p>container</p>
+    </ModuleMore>
+    
+    <ModuleExpand>
+      <h3 className="m-0">Wins</h3>
+    </ModuleExpand>
    
     <Carousel breakPoints={breakPoints} showArrows={false}>
       <div className="my-4">
