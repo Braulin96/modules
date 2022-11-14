@@ -8,10 +8,10 @@ function CalendarWeek() {
         },
         containerSize:{
             display:"block",
-           maxWidth: 50,
-           minWidth: 25,
-           width: "8vw",  // change it to % 
-           cursor: "pointer",
+            maxWidth: 50,
+            minWidth: 25,
+            width: "8vw",  // change it to % 
+            cursor: "pointer",
         }
     } 
   return (
