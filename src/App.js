@@ -1,13 +1,9 @@
 import ModuleOptionsAndIcon from "./components/ModuleOptionsAndIcon";
 import Carousel from 'react-elastic-carousel';
-import Module from "./components/Module";
 import ModuleMore from "./components/ModuleMore";
 import ModuleExpand from "./components/ModuleExpand";
-import ModuleCalendar from "./components/ModuleCalendar";
 import CalendarWeek from "./components/CalendarWeek";
 import SettingsPage from "./components/SettingsPage";
-import InfoSettingsPage from "./components/InfoSettingsPage";
-
 
 
 function App() {

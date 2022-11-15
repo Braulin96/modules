@@ -1,5 +1,4 @@
 import React from 'react'
-import ModuleSettingsPage from './ModuleSettingsPage'
 import secondIcon from '../images/secondIcon.svg'
 
 function InfoSettingsPage(props) {
