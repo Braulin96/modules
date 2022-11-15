@@ -9,12 +9,12 @@ function ModuleSettingsPage(props) {
           borderRadius:'0px',
           boxShadow: 'rgba(249, 157, 165, 0.2) 0px 8px 24px',
           padding:"10px 5px",
-          height:  'content-fit',
-          width: 'content-fit',
+          height:  350,
+          width: 350,
         }
       }
   return (
-    <div style={styles.Settings}>
+    <div className={props.className} style={styles.Settings}>
         {props.children}
     </div>
   )
