@@ -1,6 +1,7 @@
 import React from 'react'
 import ModuleSettingsPage from './ModuleSettingsPage'
 import secondIcon from '../images/secondIcon.svg'
+import InfoSettingsPage from './InfoSettingsPage'
 
 function SettingsPage(props) {
     const style= {
@@ -18,44 +19,14 @@ function SettingsPage(props) {
   return (
     <ModuleSettingsPage>
         <div className='p-3'>
-            <h2 style= {{paddingLeft:"10px"}}>Settings</h2>
-            <div className='d-flex flex-wrap justify-content-between' style={{paddingTop:"20px"}}>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <img src={secondIcon} alt="image"/>
-                    <h4 style={{ margin:"auto"}}>Name</h4>
-                </div>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <p style={{ margin:"auto"}}>Super long name ...</p>
-                </div>
-            </div>
-            <div className='d-flex flex-wrap justify-content-between' style={{paddingTop:"20px"}}>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <img src={secondIcon} alt="image"/>
-                    <h4 style={{ margin:"auto"}}>Surname</h4>
-                </div>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <p style={{ margin:"auto"}}>Tavares</p>
-                </div>
-            </div>
-            <div className='d-flex flex-wrap justify-content-between' style={{paddingTop:"20px"}}>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <img src={secondIcon} alt="image"/>
-                    <h4 style={{ margin:"auto"}}>Date of Birth</h4>
-                </div>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <p style={{ margin:"auto"}}>05/01/2001</p>
-                </div>
-            </div>
-            <div className='d-flex flex-wrap justify-content-between' style={{paddingTop:"20px"}}>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <img src={secondIcon} alt="image"/>
-                    <h4 style={{ margin:"auto"}}>Height</h4>
-                </div>
-                <div className='d-flex flex-wrap' style={{alignItems:"center", justifyContent:"center"}}>
-                    <p style={{ margin:"auto"}}>180 cm </p>
-                </div>
-            </div>
-
+            <h2 style= {{paddingLeft:"10px", paddingBottom:"20px"}}>Settings</h2>
+            <InfoSettingsPage info="Name" input="Super long Name"/>
+            <hr style={{marginLeft:"15px"}}/>
+            <InfoSettingsPage info="Surname" input="Tavares"/>
+            <hr style={{marginLeft:"15px"}}/>
+            <InfoSettingsPage info="Date of Birth" input="05/01/2021"/>
+            <hr style={{marginLeft:"15px",}}/>
+            <InfoSettingsPage info="Height" input="180cm"/>
         </div>
     </ModuleSettingsPage>
   )

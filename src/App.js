@@ -6,6 +6,7 @@ import ModuleExpand from "./components/ModuleExpand";
 import ModuleCalendar from "./components/ModuleCalendar";
 import CalendarWeek from "./components/CalendarWeek";
 import SettingsPage from "./components/SettingsPage";
+import InfoSettingsPage from "./components/InfoSettingsPage";
 
 
 
