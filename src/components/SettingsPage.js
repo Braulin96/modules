@@ -1,6 +1,7 @@
 import React from 'react'
 import ModuleSettingsPage from './ModuleSettingsPage'
 import InfoSettingsPage from './InfoSettingsPage'
+import '../index.css'
 
 function SettingsPage(props) {
     const style= {
@@ -19,13 +20,13 @@ function SettingsPage(props) {
     <ModuleSettingsPage>
         <div className='p-3'>
             <h2 style= {{paddingLeft:"10px", paddingBottom:"20px"}}>Settings</h2>
-            <InfoSettingsPage info="Name" input="Super long Name uper long Name uper long Name"/>
+            <InfoSettingsPage title="Name" info="Enter name" input="Super long Name uper long Name uper long Name"/>
             <hr style={{marginLeft:"15px"}}/>
-            <InfoSettingsPage info="Surname" input="Tavares"/>
+            <InfoSettingsPage title="Surname" info="Enter surname" input="Tavares"/>
             <hr style={{marginLeft:"15px"}}/>
-            <InfoSettingsPage info="Date of Birth" input="05/01/2021"/>
+            <InfoSettingsPage title="Date of Birth" info="Enter date of birth" input="05/01/2021"/>
             <hr style={{marginLeft:"15px", color:"black"}}/>
-            <InfoSettingsPage info="Height" input="180cm"/>
+            <InfoSettingsPage title= "Height" info="Enter height (cm)" input="180cm"/>
         </div>
     </ModuleSettingsPage>
   )

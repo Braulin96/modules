@@ -86,10 +86,10 @@ function ModuleExpand(props) {
               <div style={styles.moduleDotIcon}>
                 <img src={secondIcon} alt="image" />
               </div>
-                <a onClick={handleShow}> <img style={styles.expandBot} src={expand} alt="" /></a>
+              <a onClick={handleShow}> <img style={styles.expandBot} src={expand} alt="" /></a>
             </div>
             <div style={styles.containerText}>
-            {props.children}
+              {props.children}
             </div>
           </div>
         </div>
