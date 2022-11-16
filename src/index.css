@@ -36,3 +36,20 @@ p.m-0{
   border:none;
   padding: 5px 2px 5px 12px; 
 }
+
+.colorPlaceholder {
+  color: #ff0000;
+  opacity: 1;
+}
+
+.modal-footer{
+  justify-content: center !important; 
+}
+
+/*
+toAlignModal{
+  justify-content: center !important; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
